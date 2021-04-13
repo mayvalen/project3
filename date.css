@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'NeueBit';
+    src: url('NeueBit-Bold.woff2') format('woff2'),
+        url('NeueBit-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Migra';
+    src: url('MigraItalic-ExtralightItalic.woff2') format('woff2'),
+        url('MigraItalic-ExtralightItalic.woff') format('woff');
+    font-weight: 30;
+    font-style: italic;
+    font-display: swap;
+}
+
+a {
+    font-family: 'NeueBit';
+    margin-top: 40px;
+    margin-bottom: 7px;
+    font-size: 17em;
+    color: rgb(17, 0, 255);
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(209, 209, 209);
+}
+
+
+
+.heading {
+    font-family: 'Migra';
+    font-style: italic;
+    font-size: 2em;
+    position: fixed;
+    margin-left: 42%;
+    margin-top: -.5em;
+    color: lawngreen;
+}
+
+.guess {
+    color: orange;
+    display: none;
+}
+
+.guess.active {
+    display: block;
+}
+
+.incorrect {
+    color: red;
+    display: none;
+}
+
+.correct {
+    color: lawngreen;
+    display: none;
+}
+
+.birthday {
+    color: lawngreen;
+    display: block;
+}
+
+.birthday.inactive {
+    display: none;
+}
+
+
+
+
+.date-container {
+/*     max-width: 550px; */
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-bottom: 15px;    
+    padding: 1rem;
+    border-radius: 25px;
+    grid-gap: .4rem;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
+
+.date-container:hover {
+    cursor: cell;
+}
+
+.filter {
+    padding: 1rem;
+    position: fixed;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.4em;
+    cursor: cell;
+}
+
+.js-categories {
+    display: none;
+    max-width: 8em;
+}
+
+.js-reset {
+    color: red;
+}
+
+/* individual hover styles */
+.js-actor:hover {
+    color: lawngreen;
+}
+.js-actress:hover {
+    color: lawngreen;
+}
+
+.js-artist:hover {
+    color: lawngreen;
+}
+
+.js-character:hover {
+    color: lawngreen;
+}
+
+.js-comedian:hover {
+    color: lawngreen;
+}
+
+.js-director:hover {
+    color: lawngreen;
+}
+
+.js-entrepreneur:hover {
+    color: lawngreen;
+}
+
+.js-fashion-blogger:hover {
+    color: lawngreen;
+}
+
+.js-fashion-designer:hover {
+    color: lawngreen;
+}
+
+.js-film-producer:hover {
+    color: lawngreen;
+}
+
+.js-model:hover {
+    color: lawngreen;
+}
+
+.js-musician:hover {
+    color: lawngreen;
+}
+
+.js-photographer:hover {
+    color: lawngreen;
+}
+
+.js-rapper:hover {
+    color: lawngreen;
+}
+
+.js-singer:hover {
+    color: lawngreen;
+}
+
+
+
+
+
+
+
+/* Images */
+/* styling image container */
+.image-container {
+    padding: 1rem;
+/*     border: 1px solid black; */
+    
+/*     border-radius: 25px; */
+    grid-gap: .4rem;
+    grid-template-columns: 1fr 1fr;
+    width: 20%;
+    margin-top: -4em;
+    margin-left: 55%;
+    margin-bottom: 5em;
+    display: none;
+}
+
+    .image-container.active {
+        display: grid;
+    }
+    
+    /* making the images behind the colors
+    and positioning them on the grid */
+    .celeb-image {
+        width: 15vw;
+        height: 15vw;
+        position: relative;
+        z-index: 1;
+        cursor: cell;
+
+    }
+    .celeb-image:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .celeb-image:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .celeb-image:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .celeb-image:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    
+    /* POSITIONING THE GREY SQUARES ON TOP  */
+    .image-square-one {
+        width: 15vw;
+        height: 15vw;
+        background-color: rgb(209, 209, 209);
+        position: absolute;
+        z-index: 3;
+        grid-column: 1;
+        grid-row: 1;
+        cursor: cell;
+
+    }
+    .image-square-one:hover {
+        display: none;
+    }
+    
+    .image-square-two {
+        width: 15vw;
+        height: 15vw;
+        background-color: rgb(209, 209, 209);
+        position: relative;
+        z-index: 3;
+        grid-column: 2;
+        grid-row: 2;
+        cursor: cell;
+
+    }
+    .image-square-two:hover {
+        display: none;
+    }
+    
+    .image-square-three {
+        width: 15vw;
+        height: 15vw;
+        background-color: rgb(209, 209, 209);
+        position: relative;
+        z-index: 3;
+        grid-column: 1;
+        grid-row: 2;
+        cursor: cell;
+ 
+    }
+    .image-square-three:hover {
+        display: none;
+    }
+    
+    .image-square-four {
+        width: 15vw;
+        height: 15vw;
+        background-color: rgb(209, 209, 209);  
+        position: relative;
+        z-index: 3;
+        grid-column: 2;
+        grid-row: 1;
+        cursor: cell;
+  
+    }
+    .image-square-four:hover {
+        display: none;
+    }
+
+   
+
+
+
+/* STYLING NAMES IN NAME CONTAINER */
+
+    .name-container {
+        margin-top: -32em;
+        margin-bottom: 3em;
+        margin-left: 7%;
+        display: none;
+    }
+
+    .name-container.active {
+        display: block;
+    }
+
+    .try-again {
+        font-family: "NeueBit";
+        font-size: 7em;
+        position: absolute;
+        margin-top: -9em;
+        margin-left: 32%;
+        color: red;
+        cursor: cell;
+        display: none;
+        
+    }
+
+    .celeb-insta {
+        font-family: "NeueBit";
+        font-size: 7em;
+        position: absolute;
+        margin-top: -9em;
+        margin-left: 32%;
+        color: lawngreen;
+        cursor: cell;
+        display: none;
+    }
+
+    h2 {
+        font-size: 7em;
+        font-family: "NeueBit";
+        color: rgb(17, 0, 255);
+        cursor: cell;
+    }
+
+    h2:hover {
+       color: rgb(209, 209, 209);
+    }
+
+    .correct-name {
+        margin-bottom: -.5em;
+
+        
+    }
+
+    .first-wrong-name {
+        margin-bottom: -.5em;
+    }
+
+
+  
+
+

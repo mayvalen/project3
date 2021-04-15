@@ -428,6 +428,7 @@ function showCelebrities() {
 //create array with answers   
             let randomPosition = document.querySelectorAll(nameContainer);
             
+            
 
 
 

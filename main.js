@@ -398,7 +398,7 @@ function showCelebrities() {
 
 
 
-            
+
 
 
 //CREATE NAME CONTAINER AND ADD ONE RIGHT ANSWER AND TWO WRONG ANSWERS
@@ -423,6 +423,15 @@ function showCelebrities() {
             secondWrongName.classList.add("second-wrong-name");
             secondWrongName.innerText = celebritie.fields.wrong_answer_two;
             nameContainer.append(secondWrongName);
+
+            
+
+            
+
+
+
+
+            
 
             //create try again button
             var tryAgain = document.createElement("p");

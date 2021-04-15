@@ -1,4 +1,4 @@
-console.log("celebrities");
+/* console.log("celebrities");
 
 //create variable for airtable
 var Airtable = require("airtable");
@@ -63,4 +63,4 @@ function showCelebrities() {
 
         
     })  
-}
+} */

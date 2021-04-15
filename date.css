@@ -15,6 +15,8 @@
     font-display: swap;
 }
 
+
+
 a {
     font-family: 'NeueBit';
     margin-top: 40px;
@@ -74,7 +76,7 @@ a:hover {
 
 .date-container {
 /*     max-width: 550px; */
-    background-color: rgb(255, 255, 255);
+
     margin: auto;
     margin-bottom: 15px;    
     padding: 1rem;
@@ -295,6 +297,8 @@ a:hover {
         margin-bottom: 3em;
         margin-left: 7%;
         display: none;
+        margin-right: 30%;
+    
     }
 
     .name-container.active {
@@ -302,24 +306,35 @@ a:hover {
     }
 
     .try-again {
-        font-family: "NeueBit";
-        font-size: 7em;
+        font-family: "Migra";
+        font-size: 2em;
         position: absolute;
-        margin-top: -9em;
-        margin-left: 32%;
+        margin-top: -1.5em;
+        
         color: red;
         cursor: cell;
-        display: none;
-        
+        display: none;  
     }
 
     .celeb-insta {
-        font-family: "NeueBit";
-        font-size: 7em;
+        font-family: "Migra";
+        font-style: italic;
+        font-size: 2em;
         position: absolute;
-        margin-top: -9em;
-        margin-left: 32%;
-        color: lawngreen;
+        margin-top: -1.5em;
+        color: #7cfc00;
+        cursor: cell;
+        display: none;
+    }
+
+    .guess-again {
+        font-family: "Migra";
+        font-style: italic;
+        font-size: 2em;
+        position: absolute;
+        margin-top: -1.5em;
+        margin-left: 15%;
+        color: rgb(209, 209, 209);
         cursor: cell;
         display: none;
     }
@@ -327,7 +342,7 @@ a:hover {
     h2 {
         font-size: 7em;
         font-family: "NeueBit";
-        color: rgb(17, 0, 255);
+        color: #1100ff;
         cursor: cell;
     }
 

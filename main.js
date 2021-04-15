@@ -400,7 +400,7 @@ function showCelebrities() {
 
 
 
-
+//going to remove this for version 4-15
 //CREATE NAME CONTAINER AND ADD ONE RIGHT ANSWER AND TWO WRONG ANSWERS
             var nameContainer = document.createElement("div");
             nameContainer.classList.add("name-container");
@@ -424,20 +424,13 @@ function showCelebrities() {
             secondWrongName.innerText = celebritie.fields.wrong_answer_two;
             nameContainer.append(secondWrongName);
 
+
+//create array with answers   
+            let randomPosition = document.querySelectorAll(nameContainer);
             
 
-            
 
 
-
-
-            
-
-            //create try again button
-            var tryAgain = document.createElement("p");
-            tryAgain.classList.add("try-again");
-            tryAgain.innerText = "try again";
-            nameContainer.append(tryAgain);
 
              //create instagram again button
             var celebInsta = document.createElement("p");
@@ -445,7 +438,60 @@ function showCelebrities() {
             celebInsta.innerText = celebritie.fields.instagram;
             nameContainer.append(celebInsta);
 
+            //create guess again button
+            var guessAgain = document.createElement("p");
+            guessAgain.classList.add("guess-again");
+            guessAgain.innerText = "guess again";
+            nameContainer.append(guessAgain);
 
+//create addEventListener to wrong answer class
+//create click function to show the try again button
+//display none nameContainer and imageContainer
+//make the try again button displayl block the nameContainer and imageContainer
+              var incorrect = document.querySelector(".incorrect");
+              firstWrongName.addEventListener("click", function(){
+
+              firstWrongName.style.color = "red";
+              tryAgain.style.display = "block";
+              incorrect.style.display = "block";
+              guess.style.display = "none"; 
+            })
+
+
+//second wrong answer function
+              secondWrongName.addEventListener("click", function(){
+
+              secondWrongName.style.color = "red";
+              tryAgain.style.display = "block";
+              incorrect.style.display = "block";
+              guess.style.display = "none"; 
+            })
+
+//correct answer functoin 
+              var correct = document.querySelector(".correct");
+              correctName.addEventListener("click", function(){
+
+              correctName.style.color = "#7cfc00";
+              celebInsta.style.display = "block";
+              correct.style.display = "block";
+              guess.style.display = "none"; 
+              guessAgain.style.display = "block";
+            })
+  
+//guess again function 
+//reset everything 
+//hide imageContainer
+//hide nameContainer 
+            guessAgain.addEventListener("click", function(){
+
+
+              celebInsta.style.display = "none";
+              correct.style.display = "none";
+              incorrect.style.display = "none";
+              guessAgain.style.display = "none";
+              imageContainer.style.display = "none";
+              nameContainer.style.display = "none";
+            })
 
 
 
@@ -464,6 +510,7 @@ function showCelebrities() {
               nameContainer.classList.toggle("active");
               birthday.classList.toggle("inactive");
               guess.classList.toggle("active");
+              incorrect.style.display = "none";
             })
 
 

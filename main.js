@@ -425,9 +425,11 @@ function showCelebrities() {
             nameContainer.append(secondWrongName);
 
 
-//create array with answers   
-            let randomPosition = document.querySelectorAll(nameContainer);
             
+
+/* //create array with answers   
+            let randomPosition = document.querySelectorAll(nameContainer);
+            randomPosition */
             
 
 
